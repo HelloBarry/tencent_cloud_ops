@@ -253,7 +253,7 @@ def _create_cvm(nums):
         time.sleep(0.1)
 
 # 批量销毁全部云服务器
-def _destroy_cvm(nums):
+def _destroy_cvm():
     _describe_instances()
 
     client = _get_cvm_client()
