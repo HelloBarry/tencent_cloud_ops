@@ -86,7 +86,7 @@ def _describe_instances():
 # 生成Windows服务器随机密码
 def _generate_instance_password():
     words = PW_CHARS + PW_CHARS.upper() + PW_MAGIC_WORDS
-    return ''.join(random.sample(words, PW_LENGTH))
+    return ''.join(random.sample(words, PW_LENGTH-1)) + random.choice(PW_MAGIC_WORDS)
 
 # 导出实例信息到Excel
 def _dump_to_excel():
